@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <ul class="pages">
+    {{ range .Site.Menus.main }}
+        {{ $text := print .Name | safeHTML }}
+        <li> <a class="nav-link" href="{{ .URL }}">{{ $text }}</a> </li>
+    {{ end }}
+    </ul>
+    <ul class="socials-list">
+      {{ range .Site.Menus.socials }}
+        <li>
+          <a href="{{.URL}}">
+            <span class="icon" aria-hidden="true">
+              {{ partialCached (print .Pre) .}} 
+            </span>&nbsp;
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+</nav>
