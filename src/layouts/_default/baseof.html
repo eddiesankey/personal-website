@@ -4,9 +4,9 @@
 <body>
 
     {{ partial "nav.html" . }}
-
-    <div class="main-container">
-        <main id="main">
+    <div class="flex justify-center items-center ">
+        <!-- NOTE THIS HEIGHT DEPENDS ON NAVBAR HEIGHT -->
+        <main class="h-[calc(100vh-60px)] max-w-screen-lg lg:min-w-screen-lg" id="main">
             {{ block "main" . }}{{ end }}
         </main>
     </div>

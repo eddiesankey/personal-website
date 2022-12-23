@@ -19,9 +19,21 @@ css_sheets = ["css/styles.css"]
     url = "/blog/"
     weight = 2
     [[menu.main]]
-    name = "Resume"
-    url = "/resume/"
+    name = "Work"
+    url = "/work/"
     weight = 3
+    [[menu.main]]
+    name = "Dummy1"
+    url = "/dummy1/"
+    weight = 4
+    [[menu.main]]
+    name = "Dummy2"
+    url = "/dummy2/"
+    weight = 5
+    [[menu.main]]
+    name = "Dummy3"
+    url = "/dummy3/"
+    weight = 6
 
     [[menu.socials]]
     name = "Github"

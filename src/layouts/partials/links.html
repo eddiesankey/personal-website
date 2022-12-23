@@ -1,0 +1,11 @@
+<ul class="socials-list">
+    {{ range .Site.Menus.socials }}
+      <li>
+        <a href="{{.URL}}">
+          <span class="icon" aria-hidden="true">
+            {{ partialCached (print .Pre) .}} 
+          </span>&nbsp;
+        </a>
+      </li>
+    {{ end }}
+  </ul>

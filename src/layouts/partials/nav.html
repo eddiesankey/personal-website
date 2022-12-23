@@ -1,19 +1,28 @@
-<nav class="navbar">
-    <ul class="pages">
-    {{ range .Site.Menus.main }}
-        {{ $text := print .Name | safeHTML }}
-        <li> <a class="nav-link" href="{{ .URL }}">{{ $text }}</a> </li>
-    {{ end }}
-    </ul>
-    <ul class="socials-list">
-      {{ range .Site.Menus.socials }}
-        <li>
-          <a href="{{.URL}}">
-            <span class="icon" aria-hidden="true">
-              {{ partialCached (print .Pre) .}} 
-            </span>&nbsp;
-          </a>
-        </li>
-      {{ end }}
-    </ul>
+<nav class="
+    px-2 pl-3 sm:px-4 pt-2
+    overflow-auto whitespace-nowrap 
+    dark:bg-gray-900">
+    <div class="
+        container flex items-center justify-between
+        sm:flew-col
+        ">
+      <a class="flex items-center sm:translate-x-1/2 sm:justify-center">
+        <span class="
+          self-center 
+          text-xl font-semibold
+          dark:text-white"
+          >ES</span>
+      </a>
+      <div class="w-min md:block">
+        <ul class="
+          flex flex-row md:flex-row ">
+          {{ range .Site.Menus.main }}
+              {{ $text := print .Name | safeHTML }}
+              <li> <a class="block py-2 pl-3 pr-4 
+                text-black rounded dark:text-white"
+                href="{{ .URL }}">{{ $text }}</a> </li>
+          {{ end }}
+          </ul>
+      </div>
+    </div>
 </nav>
